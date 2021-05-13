@@ -9,10 +9,12 @@ import UIKit
 
 class PostViewController: UIViewController {
 
+    var newTitle: FeedViewController.Post?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = "My Title"
-
+        title = newTitle?.title
+        
     }
 }

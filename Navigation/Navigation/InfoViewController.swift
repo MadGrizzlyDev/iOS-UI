@@ -12,8 +12,7 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
+    @IBAction func attention(_ sender: Any) {
         let vc = UIAlertController(title: "Error", message: "Something wrong", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
             print("Cancel")
@@ -25,8 +24,14 @@ class InfoViewController: UIViewController {
         vc.addAction(okAction)
         
         present(vc, animated: true, completion: nil)
-        super.viewDidAppear(animated)
     }
+    
+
+    
+    
+    //override func viewDidAppear(_ animated: Bool) {
+      //  super.viewDidAppear(animated)
+    //}
     
 }
 
