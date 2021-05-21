@@ -13,17 +13,17 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
     }
     @IBAction func attention(_ sender: Any) {
-        let vc = UIAlertController(title: "Error", message: "Something wrong", preferredStyle: .alert)
+        let viewController = UIAlertController(title: "Error", message: "Something wrong", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
             print("Cancel")
         }
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             print("Ok")
         }
-        vc.addAction(cancelAction)
-        vc.addAction(okAction)
+        viewController.addAction(cancelAction)
+        viewController.addAction(okAction)
         
-        present(vc, animated: true, completion: nil)
+        present(viewController, animated: true, completion: nil)
     }
     
 

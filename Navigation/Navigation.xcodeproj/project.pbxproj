@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91C5AA22658037B00724D45 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C5AA12658037B00724D45 /* Post.swift */; };
 		E91CB174264C529E001CDE13 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91CB173264C529E001CDE13 /* FeedViewController.swift */; };
 		E91CB176264C52CD001CDE13 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91CB175264C52CD001CDE13 /* ProfileViewController.swift */; };
 		E91CB178264C5F5A001CDE13 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91CB177264C5F5A001CDE13 /* PostViewController.swift */; };
 		E99FF3B9264AB336000299DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FF3B8264AB336000299DC /* AppDelegate.swift */; };
 		E99FF3BB264AB336000299DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FF3BA264AB336000299DC /* SceneDelegate.swift */; };
-		E99FF3BD264AB336000299DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FF3BC264AB336000299DC /* ViewController.swift */; };
 		E99FF3C0264AB336000299DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E99FF3BE264AB336000299DC /* Main.storyboard */; };
 		E99FF3C2264AB338000299DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E99FF3C1264AB338000299DC /* Assets.xcassets */; };
 		E99FF3C5264AB338000299DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E99FF3C3264AB338000299DC /* LaunchScreen.storyboard */; };
@@ -20,13 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E91C5AA12658037B00724D45 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E91CB173264C529E001CDE13 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		E91CB175264C52CD001CDE13 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E91CB177264C5F5A001CDE13 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		E99FF3B5264AB336000299DC /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99FF3B8264AB336000299DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E99FF3BA264AB336000299DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E99FF3BC264AB336000299DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E99FF3BF264AB336000299DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E99FF3C1264AB338000299DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E99FF3C4264AB338000299DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,12 +66,12 @@
 			children = (
 				E99FF3B8264AB336000299DC /* AppDelegate.swift */,
 				E99FF3BA264AB336000299DC /* SceneDelegate.swift */,
-				E99FF3BC264AB336000299DC /* ViewController.swift */,
 				E99FF3BE264AB336000299DC /* Main.storyboard */,
 				E9FEE106264D622D008438C0 /* InfoViewController.swift */,
 				E91CB177264C5F5A001CDE13 /* PostViewController.swift */,
 				E91CB173264C529E001CDE13 /* FeedViewController.swift */,
 				E91CB175264C52CD001CDE13 /* ProfileViewController.swift */,
+				E91C5AA12658037B00724D45 /* Post.swift */,
 				E99FF3C1264AB338000299DC /* Assets.xcassets */,
 				E99FF3C3264AB338000299DC /* LaunchScreen.storyboard */,
 				E99FF3C6264AB338000299DC /* Info.plist */,
@@ -150,11 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E91CB178264C5F5A001CDE13 /* PostViewController.swift in Sources */,
-				E99FF3BD264AB336000299DC /* ViewController.swift in Sources */,
 				E99FF3B9264AB336000299DC /* AppDelegate.swift in Sources */,
 				E9FEE107264D622D008438C0 /* InfoViewController.swift in Sources */,
 				E91CB176264C52CD001CDE13 /* ProfileViewController.swift in Sources */,
 				E91CB174264C529E001CDE13 /* FeedViewController.swift in Sources */,
+				E91C5AA22658037B00724D45 /* Post.swift in Sources */,
 				E99FF3BB264AB336000299DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c8Z-H9-6Nk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment version="4864" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -48,7 +47,7 @@
         <scene sceneID="pFe-mq-p9V">
             <objects>
                 <navigationController id="bMx-2g-jAp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="User feed" image="newspaper" catalog="system" id="eN1-vw-cse"/>
+                    <tabBarItem key="tabBarItem" title="User feed" image="book.fill" catalog="system" id="eN1-vw-cse"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eKD-MY-cCe">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -91,9 +90,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jm-pJ-o6F">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jm-pJ-o6F">
                                 <rect key="frame" x="73" y="332" width="269" height="179"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="59"/>
                                 <state key="normal" title="PUSH ME"/>
@@ -104,6 +102,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5LV-Ge-uai"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5LV-Ge-uai" firstAttribute="trailing" secondItem="8jm-pJ-o6F" secondAttribute="trailing" constant="72" id="3FG-RU-i95"/>
+                            <constraint firstItem="8jm-pJ-o6F" firstAttribute="top" secondItem="5LV-Ge-uai" secondAttribute="top" constant="332" id="RQ2-0S-quP"/>
+                            <constraint firstItem="5LV-Ge-uai" firstAttribute="bottom" secondItem="8jm-pJ-o6F" secondAttribute="bottom" constant="297" id="u6f-JR-L24"/>
+                            <constraint firstItem="8jm-pJ-o6F" firstAttribute="leading" secondItem="5LV-Ge-uai" secondAttribute="leading" constant="73" id="yPv-sN-ZHx"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ha6-eB-hpz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -118,19 +122,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYl-dB-ZoP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYl-dB-ZoP">
                                 <rect key="frame" x="102" y="369" width="210" height="159"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Fresh post"/>
                                 <connections>
-                                    <segue destination="7Gu-NS-jLR" kind="show" id="eCl-YD-fnY"/>
+                                    <segue destination="7Gu-NS-jLR" kind="show" identifier="post" id="eCl-YD-fnY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zWO-3a-DFv"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="zWO-3a-DFv" firstAttribute="trailing" secondItem="uYl-dB-ZoP" secondAttribute="trailing" constant="102" id="0du-HF-Rms"/>
+                            <constraint firstItem="zWO-3a-DFv" firstAttribute="bottom" secondItem="uYl-dB-ZoP" secondAttribute="bottom" constant="285" id="Hdz-r8-Gw5"/>
+                            <constraint firstItem="uYl-dB-ZoP" firstAttribute="top" secondItem="zWO-3a-DFv" secondAttribute="top" constant="281" id="IV9-Um-9aY"/>
+                            <constraint firstItem="uYl-dB-ZoP" firstAttribute="leading" secondItem="zWO-3a-DFv" secondAttribute="leading" constant="102" id="o5G-wx-hpi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="User feed" id="u94-qc-cvR"/>
                 </viewController>
@@ -156,8 +165,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
-        <image name="newspaper" catalog="system" width="128" height="108"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

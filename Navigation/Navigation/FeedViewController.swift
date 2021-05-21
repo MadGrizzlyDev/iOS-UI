@@ -11,10 +11,6 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    struct Post {
-        var title: String
-    }
  
     var freshPost = Post(title: "New post")
     
@@ -22,9 +18,9 @@ class FeedViewController: UIViewController {
             guard segue.identifier == "post" else {
                 return
             }
-            guard let vc = segue.destination as? PostViewController else {
+            guard let viewController = segue.destination as? PostViewController else {
                 return
         }
-        vc.newTitle = freshPost.self
+        viewController.newTitle = freshPost
     }
 }
