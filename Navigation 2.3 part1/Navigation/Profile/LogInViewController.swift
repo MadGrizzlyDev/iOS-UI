@@ -54,17 +54,17 @@ class LogInViewController: UIViewController {
         logo.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([logo.widthAnchor.constraint(equalToConstant: 100),
                                      logo.heightAnchor.constraint(equalToConstant: 100),
-                                     logo.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                                     logo.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 120)])
+                                     logo.centerXAnchor.constraint(equalTo: self.mainView.centerXAnchor),
+                                     logo.topAnchor.constraint(equalTo: self.mainView.safeAreaLayoutGuide.topAnchor, constant: 120)])
          
         
         mainView.addSubview(loginView)
         loginView.translatesAutoresizingMaskIntoConstraints = false
               NSLayoutConstraint.activate([
-                                            loginView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 340),
+                                            loginView.topAnchor.constraint(equalTo: self.mainView.safeAreaLayoutGuide.topAnchor, constant: 340),
                                             loginView.heightAnchor.constraint(equalToConstant: 100),
-                                            loginView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-                                            loginView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -16)])
+                                            loginView.leadingAnchor.constraint(equalTo: self.mainView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+                                            loginView.trailingAnchor.constraint(equalTo: self.mainView.safeAreaLayoutGuide.trailingAnchor, constant: -16)])
         
         loginView.layer.cornerRadius = 10
         loginView.layer.borderWidth = 0.5
@@ -77,8 +77,8 @@ class LogInViewController: UIViewController {
         NSLayoutConstraint.activate([
                                         login.topAnchor.constraint(equalTo: self.logo.bottomAnchor, constant: 120),
                                         login.heightAnchor.constraint(equalToConstant: 50),
-                                        login.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-                                        login.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -16)])
+                                        login.leadingAnchor.constraint(equalTo: self.mainView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+                                        login.trailingAnchor.constraint(equalTo: self.mainView.safeAreaLayoutGuide.trailingAnchor, constant: -16)])
        
         login.backgroundColor = .systemGray6
         login.tintColor = UIColor(named: "DirtyBlue")
@@ -97,8 +97,8 @@ class LogInViewController: UIViewController {
         NSLayoutConstraint.activate([
                                         password.topAnchor.constraint(equalTo: self.login.bottomAnchor, constant: .zero),
                                         password.heightAnchor.constraint(equalToConstant: 50),
-                                        password.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-                                        password.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -16)])
+                                        password.leadingAnchor.constraint(equalTo: self.mainView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+                                        password.trailingAnchor.constraint(equalTo: self.mainView.safeAreaLayoutGuide.trailingAnchor, constant: -16)])
       
         password.backgroundColor = .systemGray6
         password.tintColor = UIColor(named: "DirtyBlue")
@@ -114,10 +114,10 @@ class LogInViewController: UIViewController {
         mainView.addSubview(loginButton)
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-                                        loginButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 456),
+                                        loginButton.topAnchor.constraint(equalTo: self.mainView.safeAreaLayoutGuide.topAnchor, constant: 456),
                                         loginButton.heightAnchor.constraint(equalToConstant: 50),
-                                        loginButton.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-                                        loginButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -16)])
+                                        loginButton.leadingAnchor.constraint(equalTo: self.mainView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+                                        loginButton.trailingAnchor.constraint(equalTo: self.mainView.safeAreaLayoutGuide.trailingAnchor, constant: -16)])
 
         loginButton.setBackgroundImage(pixelNormal, for: .normal)
         loginButton.setBackgroundImage(pixelSelected, for: .selected)
