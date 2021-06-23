@@ -137,7 +137,36 @@ class LogInViewController: UIViewController {
         let controller = storyboard?.instantiateViewController(identifier: "ProfileVC")
         navigationController?.pushViewController(controller!, animated: false)
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc fileprivate func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            
+            scroll.contentInset.bottom = keyboardSize.height
+            scroll.verticalScrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+        }
+    }
+    
+    @objc fileprivate func keyboardWillHide(notification: NSNotification) {
+        scroll.contentInset.bottom = .zero
+        scroll.verticalScrollIndicatorInsets = .zero
+    }
 }
+
 
 
 extension LogInViewController: UITextFieldDelegate {
@@ -146,3 +175,4 @@ extension LogInViewController: UITextFieldDelegate {
         return true
     }
 }
+
